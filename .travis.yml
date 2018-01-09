@@ -3,11 +3,10 @@ rvm:
 - 2.3.1
 
 before_install:
-- GIT_POST_URL=$(ruby -r "$PWD"/script/config.rb -e "puts @github_post_url")
+- GIT_POST_URL=$(ruby -r $PWD/script/config.rb -e "puts @github_post_url")
 - git clone $GIT_POST_URL
-- cp -r research-notes/posts/* _posts/
+- cp research-notes/* _posts/
 - ls -al _posts/
-- rm -rf research-notes
 
 install:
 - gem install rake
@@ -23,15 +22,15 @@ deploy:
 
 
 after_success:
-  - git clone https://github.com/hibrainnet/hibrainnet.github.io.git
-  - cd hibrainnet.github.io
+  - git clone https://github.com/Jungyerin/Jungyerin.github.io.git
+  - cd Jungyerin.github.io
   - shopt -s extglob
   - rm -rf !(.git)
   - cd ..
-  - cp -r _site/* hibrainnet.github.io/
-  - cd hibrainnet.github.io
+  - cp -r _site/* Jungyerin.github.io/
+  - cd Jungyerin.github.io
   - git add .
   - git commit -m "deploy from travis"
   - ls -al
-  - git push https://$GITHUB_TOKEN@github.com/hibrainnet/hibrainnet.github.io.git master
+  - git push https://$GITHUB_TOKEN@github.com/Jungyerin/Jungyerin.github.io.git master
   - cd ..

@@ -1,11 +1,9 @@
 ## 사이트 설정
-title: 하이브레인넷 부설연구소
-twitter : https://twitter.com/hibrainnet
-facebook : https://www.facebook.com/하이브레인넷-부설연구소-488747181169148/
-email: apps@hibrain.net
+title: 블로그 내꺼당
+twitter : https://twitter.com/
+facebook : https://www.facebook.com//
+email: 
 description: >-
-#baseurl: "/jekyll-and-hybe"
-url: "http://blog.hibrainapps.net"
 
 ## git 설정
 git:
@@ -15,49 +13,46 @@ git:
 
 
 # Google Analytics
-google_analytics: UA-18071244-5    
+google_analytics:
 
 ## Medium tokens 설정
 medium:
-  integration_token: ${MEDIUM_TOKEN}
+  integration_token:
 
 
 ## gitbub remote 설정
-github_post:  ##post를 저장할 저장소의 url 설정 
-    remote_url: https://hibrainnet:${GIHUB_TOKEN}@github.com/hibrainnet/research-notes.git
+github_post:  ##post를 저장할 저장소의 url 설정
+    remote_url: https://Jungyerin:@github.com/Jungyerin/mdrepo.git
 
 
 
 ## github 설정
 github_page:
-  remote_url: /hibrainnet/jekyll-and-hybe.git
-  branch: source
-  token: ${GITHUB_TOKEN}
+  remote_url:
+  branch:
+  token:
   builder: travis
 
 ## travis를 이용한 github page 빌드 설정
 travis:
-  github_token: ${GIHUB_TOKEN}
+  github_token:
   target_branch: master
   source_branch: source
-  repository_path: hibrainnet/jekyll-and-hybe
+  repository_path: Jungyerin/jekyllrepo
 
 ## 소셜 서비스 계정
 sns:
-  twitter: hibrainapps
-  github: hibrainnet
-  medium: hibrainapps
-
-# twitter_username: hibrainapps
-# github_username:  hibrainnet
+  twitter: 
+  github: 
+  medium: 
 
 ## 댓글 계정
 comments:
   disqus:
-    shortname: hibrainappsblog
+    shortname:
   facebook:
-    admin_id: 100001627773972
-    app_id: 147895112528926
+    admin_id:
+    app_id:
 
 ## 페이징 설정
 
@@ -67,7 +62,7 @@ pagination:
   per_page: 5 # 한 화면에 보여줄 post 갯수
   permalink: '/page/:num'
   limit: 0 # 한번에 보여줄 페이징 숫자
-  sort_field: "date"
+  sort_field: date
   sort_reverse: true
 
 # 작성자 설정 (콜렉션)
@@ -103,11 +98,3 @@ exclude:
   - LICENSE
   - README.md
   - Rakefile
-
-#pre-push hook 변수
-#githubURL=소스코드를 push할 URL
-#githubBranch=소스코트를 push할 Branch
-#remoteName=소스코드를 보낼 remote 이름
-githubURL: git@github.com:hibrainnet/jekyll-and-hybe.git
-githubBranch: source
-remoteName: github
